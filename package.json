@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-testcafe-extended",
+  "version": "0.1.0",
+  "description": "ESLint rules for creating testcafe fixtures and tests",
+  "repository": "https://github.com/stefanschenk/eslint-plugin-testcafe-extended",
+  "homepage": "https://github.com/stefanschenk/eslint-plugin-testcafe-extended",
+  "author": {
+    "name": "Stefan Schenk",
+    "email": "stefan@schenkweb.nl"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "plugin",
+    "rules",
+    "testcafe"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0"
+  }
+}
