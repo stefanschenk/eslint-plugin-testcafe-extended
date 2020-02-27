@@ -1,6 +1,6 @@
 # eslint-plugin-testcafe-extended
 
-ESLint plugin with custom rules for testcafe code linting.
+ESLint plugin with custom rules for [TestCafe](https://devexpress.github.io/testcafe/). code linting.
 This plugin will trigger on `.debug()` statements, wherever they are used in a `test`.
 This plugin will trigger on `.only` statements, independent of their placement in the `fixture` or `test` command chain.
 
@@ -8,7 +8,7 @@ This plugin will trigger on `.only` statements, independent of their placement i
 
 ## Installation
 
-First of all, you need `eslint` installed. And to install this plugin, run:
+First of all, you need [ESLint](https://eslint.org). installed. And to install this plugin, run:
 
 ```
 npm install --save-dev eslint-plugin-testcafe-extended
@@ -18,7 +18,7 @@ npm install --save-dev eslint-plugin-testcafe-extended
 
 The example provided below is with using `.eslintrc.js` for eslint configuration, but you can also choose to use json format, or name the file specific for test, eg. `.eslintrc.test.js`. Please review eslint documentation for all configuration possibilities.
 
-Create a `.eslintrc.js` file in the root of your project. Add the following into this file;
+Create a `.eslintrc.js` file in the root of your project. If you just want to use the rules and not the supplied configuration, add the following into this file;
 
 ```
 module.exports = {
@@ -49,6 +49,22 @@ If you have a separate configuration to linting testfiles, you could add the fol
 Execute `npm run lint:test`
 
 Look at the eslint documentation to review all possible commandline options.
+
+## Recommended configuration
+
+This plugin exports a recommended configuration that enforces the rules in this plugin and
+sets the globals `fixture` and `test` to false to prevent the _is not defined_ error.
+
+To enable this configuration use the extends property in your `.eslintrc.js` config file.
+With this recommende configuration, you don't have to add the `testcafe-extended` rules yourself, they
+are contained in the recommended configuration.
+
+```
+module.exports = {
+  plugins: ['testcafe-extended'],
+  extends: "plugin:testcafe-extended/recommended"
+};
+```
 
 ## Testing
 

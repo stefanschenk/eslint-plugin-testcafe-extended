@@ -29,6 +29,25 @@ function getObjectName(node) {
 }
 
 module.exports = {
+  configs: {
+    recommended: {
+      env: {
+        browser: true,
+        node: true,
+      },
+      globals: {
+        fixture: false,
+        test: false,
+      },
+      rules: {
+        'testcafe-extended/no-only-statements': ['error'],
+        'testcafe-extended/no-debug-statements': ['error'],
+        //  TestCafe actions need to start with `await`, just in case you want to run an `await t.<action>` inside
+        //  a loop, we set the following eslint rule to 'off'
+        'no-await-in-loop': ['off'],
+      },
+    },
+  },
   rules: {
     'no-debug-statements': {
       create: function(context) {
